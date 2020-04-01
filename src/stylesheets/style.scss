@@ -1,0 +1,125 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  width: 80%;
+  margin: 0 auto;
+  height: 800px;
+  // border: 1px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  border-radius: 5px;
+  // background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    margin: 3rem auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__form {
+    border: 1px solid darkgray;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 80%;
+
+    &--input,
+    &--btn {
+      display: block;
+      margin: 1rem auto;
+      border-radius: 5px;
+      border: 1px solid darkgray;
+    }
+
+    &--input {
+      width: 80%;
+      padding: .5rem;
+      text-align: center;
+      font-size: 1.2rem;
+      transition: background-color .2s;
+      outline: none;
+
+      &:focus {
+        background-color: #e0e0e0;
+      }
+    }
+
+    &--btn {
+      width: 10rem;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: .5rem 2rem;
+      text-transform: uppercase;
+      outline: none;
+      transition: all .2s;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+      
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  &__results {
+    width: 50%;
+    margin: 2rem auto;
+    margin-top: 3rem;
+    text-align: center;
+
+    &--amount {
+      font-size: 1.1rem;
+      margin: 1rem auto;
+    }
+
+    &--total {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app {
+    padding: 5rem 1rem;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__form {
+      padding: .5rem;
+
+      &--input {
+        width: 90%;
+      }
+
+      &--btn {
+        width: 5rem;
+        font-size: .7rem;
+        padding: .5rem;
+      }
+    }
+  }
+}
